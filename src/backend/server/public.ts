@@ -304,6 +304,8 @@ publicRouter.get("/settings", async (c) => {
     ...Object.keys(settingsObj),
     // Keys read by the frontend beyond the defaults above:
     "audio_cover",
+    "multipart_enabled",
+    "multipart_chunk_size",
     "home_container",
     "ldap_login_tips",
     "search_index",

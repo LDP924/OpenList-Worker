@@ -63,6 +63,22 @@ export const defaultDb = {
       flag: 0,
     },
     {
+      key: "multipart_enabled",
+      value: "true",
+      type: "bool",
+      help: "Enable multipart upload",
+      group: 1,
+      flag: 0,
+    },
+    {
+      key: "multipart_chunk_size",
+      value: "6",
+      type: "number",
+      help: "Multipart upload chunk size (MB)",
+      group: 1,
+      flag: 0,
+    },
+    {
       key: "allow_indexed",
       value: "false",
       type: "bool",

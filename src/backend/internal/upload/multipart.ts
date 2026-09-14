@@ -58,8 +58,8 @@ export interface MultipartSnapshot {
 const sessions = new Map<string, MultipartSession>()
 
 const CHUNK_MIN = 1 * 1024 * 1024 // 1MB
-const CHUNK_MAX = 64 * 1024 * 1024 // 64MB
-const CHUNK_DEFAULT = 10 * 1024 * 1024 // 10MB
+const CHUNK_MAX = 64 * 1024 * 1024 // 64MB（上游默认；实际生效值由站点设置 multipart_chunk_size 驱动，EdgeOne 上建议填 ≤6）
+const CHUNK_DEFAULT = 6 * 1024 * 1024 // 6MB(1024)
 
 /** 将前端建议的 chunk_size clamp 到 [1MB, 64MB] */
 export function clampChunkSize(raw: number): number {

@@ -3,7 +3,7 @@
   "installCommand": "pnpm install --no-frozen-lockfile",
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist",
-  "nodeVersion": "22.21.1",
+  "nodeVersion": "24.18.0",
   "rewrites": [
     {
       "source": "/*",
@@ -36,7 +36,7 @@
   "schedules": [
     {
       "name": "token-refresh",
-      "cron": "0 2 * * *",
+      "cron": "0 1 * * *",
       "path": "/api/task/refresh",
       "method": "POST",
       "payload": { "cron_secret": "" },
